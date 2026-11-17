@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Портфолио Юрия (why2k), начинающего веб-разработчика." />
+  <meta name="theme-color" content="#0d0e0c" />
+  <title>Юрий (why2k) — веб-разработчик</title>
+  <link rel="stylesheet" href="css/main.css"/>
+</head>
+
+<body>
+  <header class="header">
+    <nav class="nav container" aria-label="Основная навигация">
+      <a class="logo" href="#home">why2k<span>.</span></a>
+      <button class="burger" type="button" aria-label="Открыть меню" aria-controls="site-menu" aria-expanded="false">
+        <span></span><span></span>
+      </button>
+      <div class="menu" id="site-menu">
+        <a href="#about">Обо мне</a>
+        <a href="#projects">Проекты</a>
+        <a href="#contact">Контакты</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero container" id="home">
+      <h1>Юрий <span>(why2k)</span></h1>
+      <p class="intro">Начинающий веб-разработчик. Учусь создавать удобные сайты и воплощать идеи в коде.</p>
+      <a class="button" href="#projects">Мои проекты <span>↓</span></a>
+    </section>
+
+    <section class="section container" id="about">
+      <h2>Учусь создавать сайты,<br />которые приятно использовать.</h2>
+      <p class="body-copy">Изучаю веб-разработку, пробую новые технологии и собираю первые проекты. Сейчас работаю с
+        HTML, CSS и JavaScript.</p>
+      <div class="skills" aria-label="Навыки">
+        <span>HTML</span><span>CSS</span><span>JavaScript</span><span>Git</span>
+      </div>
+    </section>
+
+    <section class="section container" id="projects">
+      <h2>Проекты</h2>
+      <div class="project-list">
+        <a class="project" href="projects/coffee.html" aria-label="Открыть проект «Сайт кофейни»">
+          <div class="project-preview project-preview--coffee" aria-hidden="true">
+            <div class="coffee-preview">
+              <div class="coffee-preview__heading">Кофейня «Зёрна»</div>
+              <div class="coffee-preview__item">
+                <span class="coffee-preview__name">Капучино</span>
+                <span class="coffee-preview__dots"></span>
+                <span class="coffee-preview__price">220 ₽</span>
+              </div>
+              <div class="coffee-preview__item">
+                <span class="coffee-preview__name">Фильтр-кофе</span>
+                <span class="coffee-preview__dots"></span>
+                <span class="coffee-preview__price">200 ₽</span>
+              </div>
+              <div class="coffee-preview__item">
+                <span class="coffee-preview__name">Круассан</span>
+                <span class="coffee-preview__dots"></span>
+                <span class="coffee-preview__price">160 ₽</span>
+              </div>
+            </div>
+          </div>
+          <div class="project-info">
+            <span class="project-number">01</span>
+            <div>
+              <h3>Сайт кофейни</h3>
+              <p>Учебный проект · HTML, CSS</p>
+            </div>
+          </div>
+        </a>
+        <a class="project" href="projects/tasks.html" aria-label="Открыть проект «Список задач»">
+          <div class="project-preview project-preview--tasks" aria-hidden="true">
+            <div class="task-preview">
+              <div class="task-preview__heading">Список задач</div>
+              <div class="task-preview__item task-preview__item--done">
+                <span class="task-preview__check">✓</span>
+                <span>Собрать портфолио</span>
+              </div>
+              <div class="task-preview__item">
+                <span class="task-preview__check"></span>
+                <span>Добавить проекты</span>
+              </div>
+              <div class="task-preview__item">
+                <span class="task-preview__check"></span>
+                <span>Проверить адаптивность</span>
+              </div>
+            </div>
+          </div>
+          <div class="project-info">
+            <span class="project-number">02</span>
+            <div>
+              <h3>Список задач</h3>
+              <p>Учебный проект · JavaScript</p>
+            </div>
+          </div>
+        </a>
+        <a class="project" href="projects/personal-site.html" aria-label="Открыть пустой проект «Личный сайт»">
+          <div class="project-preview" aria-hidden="true">
+            <img src="img/placeholder.svg" alt="" />
+          </div>
+          <div class="project-info">
+            <span class="project-number">03</span>
+            <div>
+              <h3>Личный сайт</h3>
+              <p>В процессе · HTML, CSS</p>
+            </div>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <section class="contact container" id="contact">
+      <h2>Давайте знакомиться.</h2>
+      <a class="email" href="mailto:hello@ya.ru">hello@ya.ru<span>↗</span></a>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>© 2026 Юрий (why2k)</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js" defer></script>
+</body>
+
+</html>

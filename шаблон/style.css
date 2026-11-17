@@ -1,0 +1,271 @@
+*,
+::after,
+::before {
+  box-sizing: border-box
+}
+
+html {
+  scroll-behavior: smooth
+}
+
+body {
+  min-width: 320px;
+  margin: 0;
+  background: #111;
+  color: #eee;
+  font-family: Arial, sans-serif
+}
+
+a {
+  color: inherit;
+  text-decoration: none
+}
+
+button {
+  color: inherit;
+  font: inherit
+}
+
+img {
+  display: block;
+  max-width: 100%
+}
+
+h1,
+h2,
+h3,
+p {
+  margin-top: 0
+}
+
+.container {
+  width: min(760px, 100% - 32px);
+  margin-inline: auto
+}
+
+:focus-visible {
+  outline: 2px solid #9bc85a;
+  outline-offset: 4px
+}
+
+@media (prefers-reduced-motion:reduce) {
+  html {
+    scroll-behavior: auto
+  }
+}
+
+.header {
+  border-bottom: 1px solid #333
+}
+
+.nav {
+  min-height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between
+}
+
+.logo {
+  font-weight: 700
+}
+
+.burger {
+  display: none;
+  width: 34px;
+  height: 30px;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 5px;
+  padding: 6px;
+  border: 1px solid #333;
+  background: 0 0;
+  cursor: pointer
+}
+
+.burger span {
+  width: 17px;
+  height: 2px;
+  background: #bbb
+}
+
+.burger span:last-child {
+  width: 11px
+}
+
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  color: #bbb;
+  font-size: 14px
+}
+
+.menu a {
+  padding: 6px
+}
+
+.menu a:hover {
+  color: #eee
+}
+
+.hero {
+  padding-block: 85px
+}
+
+.contact,
+.section {
+  padding-block: 40px;
+  border-top: 1px solid #333
+}
+
+@media (max-width:560px) {
+  .nav {
+    flex-wrap: wrap;
+    padding-block: 10px
+  }
+
+  .burger {
+    display: flex
+  }
+
+  .menu {
+    display: none;
+    order: 3;
+    width: 100%;
+    justify-content: flex-start;
+    gap: 4px;
+    font-size: 12px
+  }
+
+  .menu.is-open {
+    display: flex
+  }
+
+  .hero {
+    padding-block: 65px
+  }
+
+  .project-list {
+    grid-template-columns: 1fr
+  }
+
+  .project-preview {
+    height: 150px
+  }
+}
+
+.button {
+  display: inline-block;
+  margin-top: 8px;
+  padding: 11px 16px;
+  border: 1px solid #eee;
+  border-radius: 3px;
+  background: #eee;
+  color: #111;
+  font-size: 14px;
+  transition: background-color .2s ease, color .2s ease
+}
+
+.button:hover {
+  background: 0 0;
+  color: #eee
+}
+
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 18px
+}
+
+.skills span {
+  padding: 6px 9px;
+  border: 1px solid #333;
+  color: #bbb;
+  font-size: 13px
+}
+
+.project-list {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+  margin-top: 20px
+}
+
+.project {
+  overflow: hidden;
+  border: 1px solid #333
+}
+
+.project-preview {
+  height: 120px;
+  background: #191919
+}
+
+.project-preview img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover
+}
+
+.project-info {
+  display: flex;
+  gap: 10px;
+  padding: 12px
+}
+
+.project p,
+.project-number {
+  color: #bbb;
+  font-size: 12px
+}
+
+.project-number {
+  padding-top: 2px
+}
+
+.project h3 {
+  margin-bottom: 5px;
+  font-size: 15px
+}
+
+.project p {
+  margin-bottom: 0
+}
+
+.email {
+  display: inline-block;
+  margin-top: 5px
+}
+
+.email span,
+.hero h1 span,
+.logo span {
+  color: #9bc85a
+}
+
+.hero h1 {
+  margin-bottom: 16px;
+  font-size: 48px
+}
+
+.body-copy,
+.intro {
+  max-width: 520px;
+  color: #bbb;
+  line-height: 1.6
+}
+
+h2 {
+  margin-bottom: 14px;
+  font-size: 28px
+}
+
+@media (max-width:560px) {
+  .hero h1 {
+    font-size: 40px
+  }
+}

@@ -1,0 +1,345 @@
+@use "variables" as *;
+
+.button {
+  display: inline-block;
+  margin-top: 8px;
+  padding: 11px 16px;
+  border: 1px solid $color-text;
+  border-radius: 3px;
+  background: $color-text;
+  color: $color-bg;
+  font-size: 14px;
+  transition: background-color .2s ease, color .2s ease;
+
+  &:hover {
+    background: transparent;
+    color: $color-text;
+  }
+}
+
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 18px;
+
+  span {
+    padding: 6px 9px;
+    border: 1px solid $color-border;
+    color: $color-muted;
+    font-size: 13px;
+  }
+}
+
+.project-list {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+  margin-top: 20px;
+
+  @media (max-width: 560px) {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+}
+
+.project {
+  display: block;
+  overflow: hidden;
+  border: 1px solid $color-border;
+  color: inherit;
+  transition: border-color .2s ease;
+
+  &:hover {
+    border-color: $color-muted;
+  }
+
+  &-preview {
+    height: 120px;
+    background: $color-surface;
+
+    @media (max-width: 560px) {
+      height: 170px;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &-info {
+    display: flex;
+    gap: 10px;
+    padding: 12px;
+  }
+
+  &-number,
+  p {
+    color: $color-muted;
+    font-size: 12px;
+  }
+
+  &-number {
+    padding-top: 2px;
+  }
+
+  h3 {
+    margin-bottom: 5px;
+    font-size: 15px;
+  }
+
+  p {
+    margin-bottom: 0;
+  }
+}
+
+.project-preview--tasks {
+  display: flex;
+  align-items: center;
+  height: 180px;
+  padding: 12px;
+}
+
+.project-preview--coffee {
+  display: flex;
+  align-items: center;
+  height: 180px;
+  padding: 12px;
+}
+
+.coffee-preview {
+  width: 100%;
+
+  &__heading {
+    margin-bottom: 8px;
+    color: $color-muted;
+    font-size: 12px;
+  }
+
+  &__item {
+    display: flex;
+    align-items: baseline;
+    gap: 6px;
+    min-height: 25px;
+    font-size: 11px;
+  }
+
+  &__name {
+    color: $color-text;
+    white-space: nowrap;
+  }
+
+  &__dots {
+    flex: 1;
+    border-bottom: 1px dotted $color-border;
+    min-width: 10px;
+  }
+
+  &__price {
+    color: $color-accent;
+    font-weight: 700;
+    white-space: nowrap;
+  }
+}
+
+.task-preview {
+  width: 100%;
+
+  &__heading {
+    color: $color-muted;
+    font-size: 12px;
+    margin-bottom: 8px;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    min-height: 25px;
+    color: $color-text;
+    font-size: 11px;
+
+    &--done {
+      color: $color-muted;
+      text-decoration: line-through;
+    }
+
+    &--done .task-preview__check {
+      border-color: $color-accent;
+      color: $color-accent;
+    }
+  }
+
+  &__check {
+    display: grid;
+    flex: 0 0 13px;
+    width: 13px;
+    height: 13px;
+    place-items: center;
+    border: 1px solid $color-border;
+    border-radius: 3px;
+    font-size: 10px;
+  }
+}
+
+.email {
+  display: inline-block;
+  margin-top: 5px;
+}
+
+.todo-nav {
+  min-height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.todo-back-link {
+  color: $color-muted;
+  font-size: 13px;
+}
+
+.todo-page {
+  padding-block: 40px 80px;
+}
+
+.todo-app {
+  max-width: 560px;
+  margin-inline: auto;
+}
+
+.todo-heading {
+  margin-bottom: 18px;
+  font-size: 28px;
+}
+
+.todo-list {
+  display: grid;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.todo-task {
+  display: flex;
+  align-items: center;
+  min-height: 40px;
+  padding-block: 8px;
+  border-bottom: 1px solid $color-border;
+
+  &__label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    min-width: 0;
+    color: $color-text;
+    font-size: 14px;
+    overflow-wrap: anywhere;
+  }
+
+  input { accent-color: $color-accent; }
+
+  input:checked + span {
+    color: $color-muted;
+    text-decoration: line-through;
+  }
+}
+
+@media (max-width: 560px) {
+  .todo-heading {
+    font-size: 24px;
+  }
+}
+
+.coffee-nav {
+  min-height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.coffee-back-link {
+  color: $color-muted;
+  font-size: 13px;
+  transition: color .2s ease;
+
+  &:hover {
+    color: $color-text;
+  }
+}
+
+.coffee-badge {
+  display: inline-block;
+  margin-bottom: 12px;
+  padding: 4px 8px;
+  border: 1px solid $color-border;
+  border-radius: 2px;
+  color: $color-accent;
+  font-size: 11px;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+}
+
+.coffee-tag {
+  display: inline-block;
+  padding: 1px 6px;
+  border: 1px solid rgba(27, 145, 86, 0.4);
+  border-radius: 2px;
+  background: rgba(27, 145, 86, 0.15);
+  color: $color-accent;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+  vertical-align: middle;
+}
+
+.coffee-item {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  padding-block: 10px;
+  border-bottom: 1px dashed rgba(255, 255, 255, 0.08);
+
+  &:last-child {
+    border-bottom: none;
+  }
+
+  &__info {
+    flex: 0 1 auto;
+    min-width: 0;
+  }
+
+  &__name {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: $color-text;
+    font-size: 15px;
+    font-weight: 500;
+  }
+
+  &__desc {
+    margin-top: 3px;
+    color: $color-muted;
+    font-size: 12px;
+    line-height: 1.4;
+  }
+
+  &__dots {
+    flex: 1 1 auto;
+    border-bottom: 1px dotted $color-border;
+    min-width: 16px;
+    align-self: center;
+  }
+
+  &__price {
+    flex: 0 0 auto;
+    color: $color-text;
+    font-size: 14px;
+    font-weight: 600;
+    white-space: nowrap;
+  }
+}

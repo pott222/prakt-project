@@ -1,0 +1,180 @@
+@use "variables" as *;
+
+.logo span,
+.hero h1 span,
+.email span {
+  color: $color-accent;
+}
+
+.hero h1 {
+  margin-bottom: 16px;
+  font-size: 48px;
+}
+
+.intro,
+.body-copy {
+  max-width: 520px;
+  color: $color-muted;
+  line-height: 1.6;
+}
+
+h2 {
+  margin-bottom: 14px;
+  font-size: 28px;
+}
+
+@media (max-width: 560px) {
+  .hero h1 {
+    font-size: 40px;
+  }
+}
+
+.coffee-page {
+  padding-block: 40px 80px;
+}
+
+.coffee-hero {
+  max-width: 640px;
+  margin-bottom: 48px;
+}
+
+.coffee-title {
+  margin-bottom: 12px;
+  font-size: 38px;
+  font-weight: 700;
+
+  span {
+    color: $color-accent;
+  }
+}
+
+.coffee-intro {
+  margin-bottom: 16px;
+  max-width: 560px;
+  color: $color-muted;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.coffee-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  color: $color-muted;
+  font-size: 13px;
+
+  &__divider {
+    color: $color-border;
+  }
+}
+
+.coffee-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+}
+
+.coffee-category {
+  &__header {
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+    margin-bottom: 12px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid $color-border;
+  }
+
+  &__badge {
+    color: $color-accent;
+    font-size: 12px;
+    font-weight: 700;
+  }
+
+  &__title {
+    margin: 0;
+    color: $color-text;
+    font-size: 20px;
+    font-weight: 600;
+  }
+}
+
+.coffee-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.coffee-footer {
+  margin-top: 60px;
+  padding-block: 24px;
+  border-top: 1px solid $color-border;
+  color: $color-muted;
+  font-size: 12px;
+
+  &__content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+  }
+
+  &__brand {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 12px;
+  }
+
+  &__name {
+    color: $color-text;
+    font-weight: 700;
+
+    span {
+      color: $color-accent;
+    }
+  }
+
+  &__copy {
+    margin: 0;
+  }
+
+  &__info {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  &__sep {
+    color: $color-border;
+  }
+}
+
+@media (max-width: 560px) {
+  .coffee-title {
+    font-size: 30px;
+  }
+
+  .coffee-category__title {
+    font-size: 18px;
+  }
+
+  .coffee-item {
+    flex-wrap: wrap;
+    gap: 4px;
+
+    &__dots {
+      display: none;
+    }
+
+    &__price {
+      margin-top: 2px;
+      color: $color-accent;
+    }
+  }
+
+  .coffee-footer__content {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

@@ -1,0 +1,10 @@
+node_modules/
+css/
+js/
+img/
+uploads/
+includes/db-config.php
+*.log
+.DS_Store
+*.docx
+*.zip

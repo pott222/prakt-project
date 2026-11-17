@@ -1,0 +1,132 @@
+@use "variables" as *;
+
+.header {
+  border-bottom: 1px solid $color-border;
+}
+
+.nav {
+  min-height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-weight: bold;
+}
+
+.burger {
+  display: none;
+  width: 34px;
+  height: 30px;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 5px;
+  padding: 6px;
+  border: 1px solid $color-border;
+  background: transparent;
+  cursor: pointer;
+  transition: border-color .2s ease;
+
+  &:hover {
+    border-color: $color-muted;
+  }
+
+  span {
+    width: 17px;
+    height: 2px;
+    background: $color-muted;
+    transition: transform .2s ease;
+
+    &:last-child {
+      width: 11px;
+    }
+  }
+}
+
+.burger[aria-expanded="true"] span:first-child {
+  transform: translateY(3.5px) rotate(45deg);
+}
+
+.burger[aria-expanded="true"] span:last-child {
+  width: 17px;
+  transform: translateY(-3.5px) rotate(-45deg);
+}
+
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  color: $color-muted;
+  font-size: 14px;
+
+  a {
+    padding: 6px;
+
+    &:hover {
+      color: $color-text;
+    }
+  }
+}
+
+.hero {
+  padding-block: 85px;
+}
+
+.section,
+.contact {
+  padding-block: 40px;
+  border-top: 1px solid $color-border;
+}
+
+.footer {
+  margin-top: 40px;
+  padding-block: 18px;
+  border-top: 1px solid $color-border;
+  color: $color-muted;
+  font-size: 12px;
+
+  p {
+    margin-bottom: 0;
+  }
+}
+
+@media (max-width: 560px) {
+  .nav {
+    flex-wrap: wrap;
+    padding-block: 10px;
+  }
+
+  .burger {
+    display: flex;
+  }
+
+  .menu {
+    display: none;
+    order: 3;
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2px;
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 1px solid $color-border;
+    font-size: 14px;
+
+    a {
+      display: block;
+      width: 100%;
+      padding: 8px 4px;
+    }
+
+    &.is-open {
+      display: flex;
+    }
+  }
+
+  .hero {
+    padding-block: 65px;
+  }
+}
